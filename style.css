@@ -1659,4 +1659,8 @@ text-align: center;
         overflow: hidden;
   
       }
+
+      .main-lang .main-log-in{
+      display: none;
+      }
 }
