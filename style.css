@@ -1336,18 +1336,24 @@ overflow: hidden;
          .red-banner-section{
           max-width: 950px;
           width: 100%;
-          max-height: 500px;
+          min-height: 500px;
          }
 
          .red-banner-inner{
           flex-direction: column;
-          width: 100%;
           padding-right: 300px;
           width: 100%;
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
          }
+
+          .red-banner-section .list ul li{
+            padding: 9px;
+            padding-left: 10px;
+            padding-right: 10px;
+            flex-wrap: wrap;
+          }
 
          .blue-banner-section{
           max-width: 950px;
@@ -1561,4 +1567,96 @@ width: 400px;
   .red-banner-inner .red-banner-second-info{
    margin: auto;
   }
+
+  .inner-calendar{
+    margin: 0;
+    text-align: center;
+    max-width: 500px;
+  }
+  .inner-calendar .calendar-one{
+   padding: 30px;
+text-align: center;
+  }
+
+  .slideshow-container .slides-wrapper{
+    min-height: 100px;
+    height: 100%;
+  }
+
+  .slideshow-container img{
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .prev, .next{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 474px){
+
+  .calendar-section .swipe-two {
+    display: none;
+  }
+
+  .calendar-section .pop-info1 h4{
+    font-size: 10px;
+  }
+  .calendar-section .pop-info1 h5{
+    font-size: 10px;
+    width: 40px;
+    height: 20px;
+  }
+
+  .calendar-section .pop-info1 p{
+    font-size: 10px;
+  }
+  .calendar-section .pop-info1 a{
+    font-size: 10px;
+  }
+    
+  .red-banner-section .main-text{
+padding-top: 10px;
+  }
+
+  .red-banner-section{
+    max-height: 1000px;
+    height: 100%;
+    padding-bottom: 10px;
+  }
+
+    .red-banner-inner .inner-calendar p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 5px;
+    }
+
+    .red-banner-inner .calendar-one{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 110px;
+      width: 100%;
+    }
+
+  .red-banner-inner .inner-calendar{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+text-align: center;
+  }
+
+  .red-banner-section .list{
+    overflow-x: scroll;
+    max-width: 300px;
+    overflow: hidden;
+  }
+
+    .red-banner-section .list1, .list2{
+        overflow-x: scroll;
+        overflow: hidden;
+  
+      }
 }
