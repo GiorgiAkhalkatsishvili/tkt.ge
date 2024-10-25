@@ -43,7 +43,7 @@ setInterval(() => {
 
 
 const slider = document.querySelector('.icons-info-list');
-const slides = slider.querySelector('.icon1');
+const slides = slider.querySelector('.swipe');
 let startX, currentIndex = 0;
 
 slider.addEventListener('touchstart', (e) => {
@@ -65,7 +65,3 @@ slider.addEventListener('touchmove', (e) => {
     }
 });
 
-function updateSlider() {
-    const offset = -currentIndex * 100;
-    slides.style.transform = `translateX(${offset}%)`;
-}

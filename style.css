@@ -353,6 +353,8 @@ cursor: pointer;
       cursor: pointer;
       transition: 0.1s ease;
       font-weight: 500;
+      max-width: 117px;
+      width: 100vh;
 }
 
 .bottom-line .bottom-list7:hover{
@@ -364,17 +366,17 @@ cursor: pointer;
         align-items: center;
         border: solid 1px #f2f3f6;
         background-color: #f2f3f6;
-        max-width: 105px;
         padding-left: 10px;
         padding-right: 10px;
         gap: 8px;
-        width: 100%;
         height: 38px;
         border-radius: 12px;
         text-align: center;
         cursor: pointer;
         transition: 0.1s ease;
         font-weight: 500;
+        max-width: 117px;
+          width: 100vh;
 }
 
 .bottom-line .bottom-list8:hover{
@@ -1180,7 +1182,6 @@ cursor: pointer;
         max-width: 1250px;
         width: 100%;
         padding-left: 120px;
-        padding-right: 120px;
       }
 
       .inner .main-input input{
@@ -1328,8 +1329,6 @@ overflow: hidden;
       justify-content: center;
       margin: auto;
       gap: 5px;
-      overflow-x: scroll;
-      overflow: hidden;
      }
 
          .calendar-section .filter-date-cards {
@@ -1406,9 +1405,6 @@ padding-left: 20px;
    font-size: 14px;
   }
 
-  .header .bottom-line .bottom-list2{
-   margin-left: 210px;
-  }
 
   .bottom-line .final-list{
     padding-right: 90px;
@@ -1448,8 +1444,6 @@ padding-left: 20px;
     padding-right: 20px;
     max-width: 760px;
     width: 100%;
-    overflow-x: scroll;
-    overflow: hidden;
   }
 
   .icons-info-list .icon1 img{
@@ -1569,6 +1563,12 @@ width: 400px;
 
 }
 
+@media only screen and (max-width:890px) and (min-width: 475px){
+  .header .bottom-line .bottom-list2 {
+      margin-left: 210px;
+    }
+}
+
 @media only screen and (max-width: 790px){
   .red-banner-inner .red-banner-second-info{
    margin: auto;
@@ -1611,15 +1611,33 @@ text-align: center;
 overscroll-behavior: smooth;
 scrollbar-width: 10px;
   scrollbar-color: #17a2b8 #f1f1f1;
-  padding-left: 280px;
-  padding-bottom: 5px;
-
+  padding-bottom: 10px;
   }
 
-  .popular-images{
-     overflow-x: scroll;
-     
+  .header .bottom-line .bottom-list2 {
+  margin-left: 400px;
+}
+
+
+  .filter-date-cards{
+    overflow-x: scroll;
+    overflow: visible;
+    padding-bottom: 20px;
   }
+
+  
+
+  .filter-date-cards h5{
+    display: none;
+  }
+
+  .filter-date-cards .pop1 img{
+    max-width: 220px;
+    width: 100vh;
+    max-height: 190px;
+    height: 100vh;
+  }
+
 
   .bottom-line .final-list{
     display: none;
@@ -1690,7 +1708,26 @@ text-align: center;
   
       }
 
+      .last-dates-row{
+        overflow: auto;
+      }
+
+      .info-text h3{
+        padding-left: 15px;
+      }
+
       .main-lang .main-log-in{
       display: none;
+      }
+
+      .info-text .swipe-one{
+        display: none;
+      }
+
+      .bottom-list7{
+        max-width: 300px;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
       }
 }
