@@ -2,6 +2,8 @@
 
 *,html{
   box-sizing: border-box;
+  /* scrollbar-width: 100px;
+   scrollbar-color: blue #f1f1f1; */
 }
 
 body {
@@ -39,7 +41,10 @@ border-radius: 12px;
 outline: none;
 background-color: #fff;
 border: solid 1px #d9d5d5;
-padding: 7px;
+max-width: 37px;
+width: 100%;
+max-height: 37px;
+height: 100vh;
 }
 
 .inner .small-input svg{
@@ -165,7 +170,8 @@ border-color: rgb(235 237 255 1);
 
 .bottom-line{
   display: flex;
-    box-shadow: 10px 3px 7px 0px #d9d5d5;
+  padding-top: 5px;
+    box-shadow: 0px 6px 12px 0px #f0efef;
       padding-bottom: 20px;
       margin-bottom: 40px;
       display: flex;
@@ -1594,6 +1600,30 @@ text-align: center;
 }
 
 @media only screen and (max-width: 474px){
+
+  .slides-wrapper .slide img{
+    max-height: 210px;
+    height: 100vh;
+  }
+
+  .bottom-line .categories-list{
+    overflow-x: scroll;
+overscroll-behavior: smooth;
+scrollbar-width: 10px;
+  scrollbar-color: #17a2b8 #f1f1f1;
+  padding-left: 280px;
+  padding-bottom: 5px;
+
+  }
+
+  .popular-images{
+     overflow-x: scroll;
+     
+  }
+
+  .bottom-line .final-list{
+    display: none;
+  }
 
   .calendar-section .swipe-two {
     display: none;

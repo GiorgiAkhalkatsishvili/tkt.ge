@@ -40,3 +40,32 @@ setInterval(() => {
     slideIndex++;
     showSlides();
 }, 3000);
+
+
+const slider = document.querySelector('.icons-info-list');
+const slides = slider.querySelector('.icon1');
+let startX, currentIndex = 0;
+
+slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchmove', (e) => {
+    const moveX = e.touches[0].clientX;
+    const diffX = startX - moveX;
+
+    if (diffX > 50) {
+        // Swipe left
+        currentIndex = Math.min(currentIndex + 1, slides.children.length - 1);
+        updateSlider();
+    } else if (diffX < -50) {
+        // Swipe right
+        currentIndex = Math.max(currentIndex - 1, 0);
+        updateSlider();
+    }
+});
+
+function updateSlider() {
+    const offset = -currentIndex * 100;
+    slides.style.transform = `translateX(${offset}%)`;
+}
