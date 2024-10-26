@@ -3,7 +3,7 @@ const dropDown = document.querySelector(".bottom-drop-down1")
 const chevronList = document.querySelector(".chevron-list");
 
 
-dropDown.addEventListener("mouseover", () => {
+dropDown.addEventListener("click", () => {
     chevronList.style.display = "block"
 })
 
@@ -11,6 +11,59 @@ dropDown.addEventListener("mouseleave", () => {
 chevronList.style.display = "none"
 })
 
+const scrollContainer = document.querySelector(".test-swipe")
+const scrollContainer2 = document.querySelector(".dates-list")
+const nextBtn = document.querySelector("#nextBtn")
+const backBtn = document.querySelector("#backBtn")
+const items = document.querySelectorAll(".item")
+const nextBtn2 = document.querySelector('#nextBtn2')
+const backBtn2 = document.querySelector('#backBtn2')
+
+
+
+let currentIndexs = 0;
+
+nextBtn.addEventListener('click', () => {
+    currentIndexs++;
+    if (currentIndexs >= items.length) {
+        currentIndexs = 0; // Loop back to the first item
+    }
+    updateCarousel();
+    scrollContainer.style.transition = '0.5s ease';
+});
+
+nextBtn2.addEventListener('click', () => {
+    currentIndexs++;
+    if (currentIndexs >= items.length) {
+        currentIndexs = 0; // Loop back to the first item
+    }
+    updateCarousel();
+    scrollContainer2.style.transition = '0.5s ease';
+});
+
+backBtn.addEventListener('click', () => {
+    currentIndexs--;
+    if (currentIndexs <= items.length) {
+        currentIndexs = 0; // Loop back to the first item
+    }
+    updateCarousel();
+    scrollContainer.style.transition = '0.5s ease';
+});
+backBtn2.addEventListener('click', () => {
+    currentIndexs--;
+    if (currentIndexs <= items.length) {
+        currentIndexs = 0; // Loop back to the first item
+    }
+    updateCarousel();
+    scrollContainer2.style.transition = '0.5s ease';
+});
+
+
+function updateCarousel() {
+    const offset = -currentIndexs * 100; // Adjust based on item width
+    scrollContainer.style.transform = `translateX(${offset}px)`;
+    scrollContainer2.style.transform = `translateX(${offset}px)`;
+}
 
 
 let slideIndex = 0;
@@ -64,4 +117,3 @@ slider.addEventListener('touchmove', (e) => {
         updateSlider();
     }
 });
-

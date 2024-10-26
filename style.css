@@ -247,6 +247,8 @@ cursor: pointer;
     cursor: pointer;
     transition: 0.1s ease;
     font-weight: 500;
+    padding-left: 10px;
+    font-size: 14px;
 }
 
 .bottom-line .bottom-list2 img{
@@ -592,10 +594,22 @@ font-weight: 600;
   background-color: #E9E6FE;
   max-width: 1250px;
   width: 100%;
-  max-height: 390px;
+  max-height: 440px;
   height: 100vh;
   margin: auto;
   border-radius: 27px;
+}
+
+.last-dates-row{
+overflow: hidden;
+max-width: 990px;
+width: 100%;
+}
+
+.test-swipe{
+  display: flex;
+gap: 10px;
+
 }
 
 .calendar-dates .swipe-one > i{
@@ -994,8 +1008,13 @@ background-color: rgba(255, 255, 255, 0.2);
 .blue-banner-section .dates-list{
   display: flex;
     align-items: center;
-    gap: 20px;
     justify-content: center;
+}
+
+.blue-banner-section .test-swipe{
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .blue-banner-section .red-date p {
